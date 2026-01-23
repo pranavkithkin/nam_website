@@ -12,14 +12,15 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Company Info */}
                     <div>
-                        <Image
-                            src="/images/nam-logo.jpeg"
-                            alt="NAM UAE Logo"
-                            width={140}
-                            height={70}
-                            sizes="140px"
-                            className="h-14 w-auto mb-6 brightness-0 invert"
-                        />
+                        <div className="relative h-16 w-auto mb-6 mix-blend-screen">
+                            <Image
+                                src="/images/nam-logo.png"
+                                alt="NAM UAE Logo"
+                                width={160}
+                                height={80}
+                                className="h-full w-auto object-contain invert grayscale brightness-200 contrast-200"
+                            />
+                        </div>
                         <p className="font-accent text-gold-primary text-xl mb-4">
                             Solutions Beyond Expectations
                         </p>

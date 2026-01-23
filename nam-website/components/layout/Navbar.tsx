@@ -48,13 +48,18 @@ export function Navbar() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center cursor-target">
-                        <Image
-                            src="/images/nam-logo.png"
-                            alt="NAM UAE Logo"
-                            width={160}
-                            height={80}
-                            className="h-16 w-auto"
-                        />
+                        <div className={cn("relative h-20 w-auto")}>
+                            <Image
+                                src="/images/nam-logo.png"
+                                alt="NAM UAE Logo"
+                                width={160}
+                                height={80}
+                                className={cn(
+                                    "h-full w-auto object-contain transition-all duration-300"
+                                )}
+                                priority
+                            />
+                        </div>
                     </Link>
 
                     {/* Desktop Navigation */}
