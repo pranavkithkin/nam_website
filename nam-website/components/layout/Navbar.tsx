@@ -39,7 +39,7 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                isScrolled
+                isScrolled || isMobileMenuOpen
                     ? "bg-white shadow-md py-4"
                     : "bg-transparent py-6"
             )}
@@ -79,7 +79,7 @@ export function Navbar() {
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         className={cn(
                             "lg:hidden p-2",
-                            isScrolled ? "text-navy-primary" : "text-white"
+                            isScrolled || isMobileMenuOpen ? "text-navy-primary" : "text-white"
                         )}
                         aria-label="Toggle menu"
                     >
