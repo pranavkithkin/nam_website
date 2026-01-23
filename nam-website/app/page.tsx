@@ -72,8 +72,11 @@ export default function HomePage() {
             loop
             muted
             playsInline
+            preload="auto"
+            poster="/images/hero-background.webp"
             className="absolute inset-0 w-full h-full object-cover"
           >
+            <source src="/videos/hero-background.webm" type="video/webm" />
             <source src="/videos/hero-background.mp4" type="video/mp4" />
           </video>
           {/* Darker overlay for better text visibility */}
