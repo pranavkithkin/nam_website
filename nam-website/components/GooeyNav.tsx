@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { ChevronDown } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -41,7 +42,28 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
   const navRef = useRef<HTMLUListElement>(null);
   const filterRef = useRef<HTMLSpanElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
-  const [activeIndex, setActiveIndex] = useState<number>(initialActiveIndex);
+  const pathname = usePathname();
+
+  // Determine active index based on current pathname
+  const getActiveIndexFromPath = () => {
+    for (let i = 0; i < items.length; i++) {
+      const item = items[i];
+      // Check if it's a direct match
+      if (item.href && pathname === item.href) {
+        return i;
+      }
+      // Check if it's a dropdown item match
+      if (item.dropdown) {
+        const isDropdownActive = item.dropdown.some(subItem => pathname === subItem.href || pathname.startsWith(subItem.href + '/'));
+        if (isDropdownActive) {
+          return i;
+        }
+      }
+    }
+    return initialActiveIndex;
+  };
+
+  const [activeIndex, setActiveIndex] = useState<number>(getActiveIndexFromPath());
 
   const noise = (n = 1) => n / 2 - Math.random() * n;
   const getXY = (distance: number, pointIndex: number, totalPoints: number): [number, number] => {
@@ -155,6 +177,14 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     resizeObserver.observe(containerRef.current);
     return () => resizeObserver.disconnect();
   }, [activeIndex, items]);
+
+  // Update active index when pathname changes
+  useEffect(() => {
+    const newActiveIndex = getActiveIndexFromPath();
+    if (newActiveIndex !== activeIndex) {
+      setActiveIndex(newActiveIndex);
+    }
+  }, [pathname, items]);
 
   return (
     <>

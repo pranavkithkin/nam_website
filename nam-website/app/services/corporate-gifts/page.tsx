@@ -26,14 +26,14 @@ export default function CorporateGiftsPage() {
     ];
 
     const categories = [
-        "Executive Gifts",
-        "Tech Accessories",
-        "Branded Stationery",
-        "Premium Drinkware",
-        "Leather Goods",
-        "Promotional Items",
-        "Gift Hampers",
-        "Event Giveaways",
+        { name: "Executive Gifts", icon: "/images/icons/Executive gifts.png" },
+        { name: "Tech Accessories", icon: "/images/icons/Tech Accessories.png" },
+        { name: "Branded Stationery", icon: "/images/icons/Branded Stationery.png" },
+        { name: "Premium Drinkware", icon: "/images/icons/Premium Drinkware.png" },
+        { name: "Leather Goods", icon: "/images/icons/Leather Goods.png" },
+        { name: "Promotional Items", icon: "/images/icons/Promotional Items.png" },
+        { name: "Gift Hampers", icon: "/images/icons/Gift Hampers.png" },
+        { name: "Event Giveaways", icon: "/images/icons/Event Giveaways.png" },
     ];
 
     const process = [
@@ -135,8 +135,16 @@ export default function CorporateGiftsPage() {
                                 transition={{ delay: index * 0.05 }}
                                 className="bg-white rounded-lg p-6 text-center shadow-card hover:shadow-card-hover transition-all"
                             >
-                                <Sparkles className="w-8 h-8 text-gold-primary mx-auto mb-3" />
-                                <p className="font-semibold text-navy-primary">{category}</p>
+                                <div className="w-12 h-12 mx-auto mb-3 relative">
+                                    <Image
+                                        src={category.icon}
+                                        alt={category.name}
+                                        width={48}
+                                        height={48}
+                                        className="object-contain"
+                                    />
+                                </div>
+                                <p className="font-semibold text-navy-primary">{category.name}</p>
                             </motion.div>
                         ))}
                     </div>
@@ -185,6 +193,35 @@ export default function CorporateGiftsPage() {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* Related Resources */}
+            <section className="section-padding bg-gray-50">
+                <div className="container-custom max-w-2xl text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-navy-primary mb-4">
+                            Download Our Gifts Catalog
+                        </h2>
+                        <p className="text-gray-700 mb-8">
+                            Browse our complete promotional gifts catalog with pricing and customization options
+                        </p>
+                        <a
+                            href="/documents/profiles/NAM-Promotional-Gifts-Profile.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-8 py-4 bg-gold-primary hover:bg-gold-dark text-navy-primary font-semibold rounded-lg transition-colors cursor-target shadow-md hover:shadow-lg"
+                        >
+                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Download Promotional Gifts Profile
+                        </a>
+                    </motion.div>
                 </div>
             </section>
 

@@ -186,6 +186,90 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Downloads Section */}
+            <section className="section-padding bg-gray-50">
+                <div className="container-custom">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="section-title">Company Resources</h2>
+                        <p className="section-subtitle">
+                            Download our company profiles, catalogs, and service brochures
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                        <motion.a
+                            href="/documents/profiles/NAM-Corporate-Profile.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="group bg-white rounded-xl p-8 shadow-card hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-gold-primary cursor-target"
+                        >
+                            <div className="flex items-start gap-4">
+                                <div className="w-14 h-14 bg-gold-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-primary/20 transition-colors">
+                                    <svg className="w-7 h-7 text-gold-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                    </svg>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-bold text-navy-primary mb-2 group-hover:text-gold-primary transition-colors">
+                                        Corporate Profile
+                                    </h3>
+                                    <p className="text-gray-700 text-sm mb-3">
+                                        Complete company overview, services, and capabilities
+                                    </p>
+                                    <span className="text-gold-primary text-sm font-medium flex items-center gap-1">
+                                        Download PDF
+                                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </motion.a>
+
+                        <motion.a
+                            href="/documents/catalogs/NAM-Product-Catalog.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="group bg-white rounded-xl p-8 shadow-card hover:shadow-lg transition-all duration-300 border-2 border-transparent hover:border-gold-primary cursor-target"
+                        >
+                            <div className="flex items-start gap-4">
+                                <div className="w-14 h-14 bg-gold-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-gold-primary/20 transition-colors">
+                                    <svg className="w-7 h-7 text-gold-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xl font-bold text-navy-primary mb-2 group-hover:text-gold-primary transition-colors">
+                                        Product Catalog
+                                    </h3>
+                                    <p className="text-gray-700 text-sm mb-3">
+                                        Comprehensive catalog of all products and services
+                                    </p>
+                                    <span className="text-gold-primary text-sm font-medium flex items-center gap-1">
+                                        Download PDF
+                                        <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                        </motion.a>
+                    </div>
+                </div>
+            </section>
+
             {/* Statistics */}
             <section className="section-padding bg-navy-primary text-white">
                 <div className="container-custom">

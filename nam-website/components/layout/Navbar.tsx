@@ -28,6 +28,7 @@ export function Navbar() {
                 { href: "/services/corporate-gifts", label: "Corporate Gifts" },
                 { href: "/services/digital-printing", label: "Digital Printing" },
                 { href: "/services/custom-uniforms", label: "Custom Uniforms" },
+                { href: "/services/website-building", label: "Website Building" },
             ],
         },
         { href: "/portfolio", label: "Portfolio" },

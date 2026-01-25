@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Twitter, Download, FileText } from "lucide-react";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
@@ -66,16 +66,65 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Services */}
+                    {/* Resources */}
                     <div>
-                        <h3 className="text-xl font-heading font-semibold mb-6 text-white">Our Services</h3>
+                        <h3 className="text-xl font-heading font-semibold mb-6 text-white">Resources</h3>
                         <ul className="space-y-3">
-                            <li className="text-white/80">Premium Corporate Gifts</li>
-                            <li className="text-white/80">Business Cards & Stationery</li>
-                            <li className="text-white/80">Large Format Printing</li>
-                            <li className="text-white/80">Custom Uniforms Design</li>
-                            <li className="text-white/80">Branded Merchandise</li>
-                            <li className="text-white/80">Promotional Materials</li>
+                            <li>
+                                <a
+                                    href="/documents/profiles/NAM-Corporate-Profile.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/80 hover:text-gold-primary transition-colors cursor-target flex items-center gap-2"
+                                >
+                                    <Download className="w-4 h-4" />
+                                    Corporate Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/documents/catalogs/NAM-Product-Catalog.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/80 hover:text-gold-primary transition-colors cursor-target flex items-center gap-2"
+                                >
+                                    <Download className="w-4 h-4" />
+                                    Product Catalog
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/documents/profiles/NAM-Promotional-Gifts-Profile.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/80 hover:text-gold-primary transition-colors cursor-target flex items-center gap-2"
+                                >
+                                    <FileText className="w-4 h-4" />
+                                    Gifts Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/documents/brochures/NAM-Printing-Services.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/80 hover:text-gold-primary transition-colors cursor-target flex items-center gap-2"
+                                >
+                                    <FileText className="w-4 h-4" />
+                                    Printing Brochure
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="/documents/brochures/NAM-Uniform-Printing.pdf"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-white/80 hover:text-gold-primary transition-colors cursor-target flex items-center gap-2"
+                                >
+                                    <FileText className="w-4 h-4" />
+                                    Uniform Brochure
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
