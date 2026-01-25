@@ -1,4 +1,4 @@
-export type Industry = 'healthcare' | 'education' | 'ecommerce' | 'corporate' | 'creative' | 'industrial' | 'hospitality' | 'food';
+export type Industry = 'healthcare' | 'education' | 'ecommerce' | 'corporate' | 'creative' | 'industrial' | 'hospitality' | 'food' | 'technology';
 export type Region = 'UAE' | 'India' | 'KSA';
 
 export interface Project {
@@ -29,6 +29,7 @@ export const industries: { value: Industry | 'all'; label: string }[] = [
     { value: 'industrial', label: 'Industrial' },
     { value: 'hospitality', label: 'Hospitality' },
     { value: 'food', label: 'Food & Beverage' },
+    { value: 'technology', label: 'Technology' },
 ];
 
 export const projects: Project[] = [
