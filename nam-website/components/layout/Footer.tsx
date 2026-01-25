@@ -39,18 +39,28 @@ export function Footer() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/services/corporate-gifts" className="text-white/80 hover:text-gold-primary transition-colors cursor-target">
-                                    Corporate Gifts
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href="/services/digital-printing" className="text-white/80 hover:text-gold-primary transition-colors cursor-target">
                                     Digital Printing
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/services/corporate-gifts" className="text-white/80 hover:text-gold-primary transition-colors cursor-target">
+                                    Corporate Gift Items
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/website-development" className="text-white/80 hover:text-gold-primary transition-colors cursor-target">
+                                    Website Development
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/services/custom-uniforms" className="text-white/80 hover:text-gold-primary transition-colors cursor-target">
                                     Custom Uniforms
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/services/safety-equipments" className="text-white/80 hover:text-gold-primary transition-colors cursor-target">
+                                    Safety Equipments
                                 </Link>
                             </li>
                             <li>

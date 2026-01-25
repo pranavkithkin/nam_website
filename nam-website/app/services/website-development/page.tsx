@@ -7,7 +7,7 @@ import { ArrowRight, Check, Code, Sparkles, Globe, Award, Zap, Monitor, Smartpho
 import { projects } from "@/data/projects";
 import ChromaGrid from "@/components/portfolio/ChromaGrid";
 
-export default function WebsiteBuildingPage() {
+export default function WebsiteDevelopmentPage() {
     const features = [
         {
             icon: Code,
@@ -56,9 +56,14 @@ export default function WebsiteBuildingPage() {
             {/* Hero Section */}
             <section className="relative pt-32 pb-16 min-h-[60vh] flex items-center bg-navy-primary">
                 <div className="absolute inset-0 z-0 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-navy-primary via-navy-dark to-navy-light opacity-90" />
-                    <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gold-primary/10 rounded-full blur-3xl" />
-                    <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gold-light/10 rounded-full blur-3xl" />
+                    <Image
+                        src="/images/website-development.png"
+                        alt="Website Development"
+                        fill
+                        className="object-cover"
+                        priority
+                    />
+                    <div className="absolute inset-0 bg-navy-primary/80" /> {/* Overlay for text readability */}
                 </div>
 
                 <div className="container-custom relative z-10">
@@ -70,7 +75,7 @@ export default function WebsiteBuildingPage() {
                     >
                         <div className="flex items-center gap-3 mb-4">
                             <Globe className="w-10 h-10 text-gold-primary" />
-                            <p className="font-accent text-gold-primary text-2xl">Website Building</p>
+                            <p className="font-accent text-gold-primary text-2xl">Website Development</p>
                         </div>
                         <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-6">
                             Premium Websites That Drive Results

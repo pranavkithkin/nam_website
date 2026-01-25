@@ -25,10 +25,11 @@ export function Navbar() {
         {
             label: "Services",
             dropdown: [
-                { href: "/services/corporate-gifts", label: "Corporate Gifts" },
                 { href: "/services/digital-printing", label: "Digital Printing" },
+                { href: "/services/corporate-gifts", label: "Corporate Gift Items" },
+                { href: "/services/website-development", label: "Website Development" },
                 { href: "/services/custom-uniforms", label: "Custom Uniforms" },
-                { href: "/services/website-building", label: "Website Building" },
+                { href: "/services/safety-equipments", label: "Safety Equipments" },
             ],
         },
         { href: "/portfolio", label: "Portfolio" },

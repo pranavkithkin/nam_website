@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, Gift, Printer, Shirt, Users, Award, TrendingUp, MessageSquare } from "lucide-react";
+import { ArrowRight, Gift, Printer, Shirt, Users, Award, TrendingUp, MessageSquare, Globe, ShieldCheck } from "lucide-react";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import GradientText from "@/components/GradientText";
 import MagneticButton from "@/components/MagneticButton";
@@ -21,13 +21,6 @@ export default function HomePage() {
 
   const services = [
     {
-      icon: Gift,
-      title: "Corporate Gifts",
-      description: "Premium branded gifts that leave lasting impressions. From executive gifts to bulk corporate giveaways.",
-      href: "/services/corporate-gifts",
-      image: "/images/corporate-gifts.webp",
-    },
-    {
       icon: Printer,
       title: "Digital Printing",
       description: "High-quality printing solutions for business cards, brochures, banners, and large format displays.",
@@ -35,11 +28,32 @@ export default function HomePage() {
       image: "/images/digital-printing.webp",
     },
     {
+      icon: Gift,
+      title: "Corporate Gift Items",
+      description: "Premium branded gifts that leave lasting impressions. From executive gifts to bulk corporate giveaways.",
+      href: "/services/corporate-gifts",
+      image: "/images/corporate-gifts.webp",
+    },
+    {
+      icon: Globe,
+      title: "Website Development",
+      description: "Professional website design and development services to establish your digital presence.",
+      href: "/services/website-development",
+      image: "/images/website-building.webp",
+    },
+    {
       icon: Shirt,
       title: "Custom Uniforms",
       description: "Professional uniforms tailored to your brand. Corporate, industrial, and hospitality wear.",
       href: "/services/custom-uniforms",
       image: "/images/custom-uniforms.webp",
+    },
+    {
+      icon: ShieldCheck,
+      title: "Safety Equipments",
+      description: "Comprehensive range of safety equipment and personal protective gear for workplace safety.",
+      href: "/services/safety-equipments",
+      image: "/images/safety-equipments-detail.png",
     },
   ];
 
