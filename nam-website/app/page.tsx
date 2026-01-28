@@ -16,7 +16,7 @@ export default function HomePage() {
     { number: 500, label: "Happy Clients", suffix: "+" },
     { number: 2000, label: "Projects Completed", suffix: "+" },
     { number: 12, label: "Industries Served", suffix: "+" },
-    { number: 6, label: "Years Experience", suffix: "" },
+    { number: 8, label: "Years Experience", suffix: "" },
   ];
 
   const services = [
@@ -321,7 +321,7 @@ export default function HomePage() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/971563542146"
+        href="https://wa.me/971501361811"
         target="_blank"
         rel="noopener noreferrer"
         className="fixed bottom-8 right-8 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group cursor-target"

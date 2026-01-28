@@ -51,8 +51,8 @@ export default function ContactPage() {
         {
             icon: Phone,
             title: "Phone Number",
-            content: "+971 56 354 2146",
-            href: "tel:+971563542146",
+            content: "+971 50 136 1811",
+            href: "tel:+971501361811",
         },
         {
             icon: Mail,
@@ -63,7 +63,7 @@ export default function ContactPage() {
         {
             icon: Clock,
             title: "Business Hours",
-            content: "Sunday - Thursday: 9:00 AM - 6:00 PM",
+            content: "Monday - Saturday: 9:00 AM - 6:00 PM",
         },
     ];
 
@@ -295,7 +295,7 @@ export default function ContactPage() {
                                         Get in touch instantly via WhatsApp for quick responses.
                                     </p>
                                     <a
-                                        href="https://wa.me/971563542146"
+                                        href="https://wa.me/971501361811"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="btn-primary w-full inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 cursor-target"

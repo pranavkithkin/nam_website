@@ -75,6 +75,9 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
             y: window.innerHeight / 2
         });
 
+        // Reveal cursor after positioning
+        gsap.to(cursor, { opacity: 1, duration: 0.5, delay: 0.2 });
+
         const createSpinTimeline = () => {
             if (spinTl.current) {
                 spinTl.current.kill();
@@ -286,7 +289,7 @@ const TargetCursor: React.FC<TargetCursorProps> = ({
     return (
         <div
             ref={cursorRef}
-            className="fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999]"
+            className="fixed top-0 left-0 w-0 h-0 pointer-events-none z-[9999] opacity-0"
             style={{ willChange: 'transform' }}
         >
             <div

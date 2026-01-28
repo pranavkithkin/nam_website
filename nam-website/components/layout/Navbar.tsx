@@ -52,7 +52,7 @@ export function Navbar() {
                     <Link href="/" className="flex items-center cursor-target">
                         <div className={cn("relative h-20 w-auto")}>
                             <Image
-                                src="/images/nam-logo.png"
+                                src={isScrolled || isMobileMenuOpen ? "/images/nam-logo.png" : "/images/nam-logo-light.png"}
                                 alt="NAM UAE Logo"
                                 width={160}
                                 height={80}
@@ -69,9 +69,8 @@ export function Navbar() {
                         <GooeyNav items={navLinks} isScrolled={isScrolled} />
                     </div>
 
-                    {/* CTA Button */}
                     <div className="hidden lg:block">
-                        <Link href="/contact" className="btn-primary cursor-target">
+                        <Link href="/contact" className="btn-primary cursor-target whitespace-nowrap">
                             Get a Quote
                         </Link>
                     </div>
